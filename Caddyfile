@@ -1,0 +1,4 @@
+example.local {
+    tls internal
+    reverse_proxy xampp-fastapi:80
+}
