@@ -1,0 +1,4 @@
+tai-sdf.trustee-1.ics.forth.gr {
+    tls internal
+    reverse_proxy xampp-fastapi:80
+}

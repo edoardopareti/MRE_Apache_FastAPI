@@ -1,0 +1,6 @@
+# Uncommitted folders, files and artifacts
+_old/
+.env
+installers/
+trustee-source-code/
+xampp-fastapi/Trustee_LLM/

@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
+    networks:
+      app_network:
+        ipv4_address: 172.44.0.20
+    depends_on:
+      - xampp-fastapi
+
+  xampp-fastapi:
+    build:
+      context: ./xampp-fastapi
+    container_name: xampp-fastapi
+    networks:
+      app_network:
+        ipv4_address: 172.44.0.21
+    ports:
+      - "3600:80"
+    restart: unless-stopped
+
+volumes:
+  caddy_data:
+  caddy_config:
+
+networks:
+  app_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.44.0.0/24
