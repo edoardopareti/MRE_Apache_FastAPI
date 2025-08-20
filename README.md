@@ -121,3 +121,7 @@ from your local device to test the flow of requests \
 *caddy --> Apache --> Uvicorn* 
 
 is properly handled.
+
+# Save a .tar containing the Docker image
+You'll need the image reference (from "Images" --> Tags in Portainer, or REPOSITORY in `sudo docker images`)
+`sudo docker save -o xampp-fastapi.tar apache_fastapi-xampp-fastapi`
