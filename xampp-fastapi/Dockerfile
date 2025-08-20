@@ -1,7 +1,8 @@
 FROM tomsik68/xampp:latest
 
 # Copy PHP web application code and artifacts into /opt/lampp for serving
-# COPY /opt/lampp /opt/lampp
+COPY /Trustee /opt/lampp/htdocs/Trustee
+COPY /Trustee-GDPR /opt/lampp/htdocs/Trustee-GDPR
 
 # Setup build-time variables (FastAPI app)
 ARG APP_BACKEND_PORT=8000

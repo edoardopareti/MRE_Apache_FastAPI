@@ -4,3 +4,5 @@ _old/
 installers/
 trustee-source-code/
 xampp-fastapi/Trustee_LLM/
+xampp-fastapi/Trustee/
+xampp-fastapi/Trustee-GDPR/
